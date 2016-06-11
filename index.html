@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Pebbles</title>
+    <link rel="stylesheet" type="text/css" href="interface.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+
+  </head>
+  <body>
+
+    <div id="wrapper">
+
+      <div id="wrapper_rock" onClick="rockClick(1)" align="center">
+
+        <div id="rock"><img src="img/stone-pile.png" height="256"></div>
+
+        <span id="pebbles">Pebbles: <span id="pebbles_count">0</span></span>
+        <span id="pebblespersecond">PPS: <span id="pps">0</span></span>
+
+      </div>
+
+      <div id="wrapper_buildings">
+
+        <div id="worker_wrapper" class="building" onClick="buyWorker()" align="center" title="Workers generate 1 pebble per second.">
+
+          <div id="building_worker"><img src="img/mining.png" height="128"></div>
+          <span class="worker">Workers: <span id="worker_count">0</span>
+          <span class="worker">Cost: <span id="worker_cost">15</span>
+
+        </div>
+
+        <div id="drill_wrapper" class="building" onClick="buyDrill()" align="center" title="Drills generate 10 pebbles per second.">
+
+          <div id="building_drill"><img src="img/drill.png" height="128"></div>
+          <span class="drill">Drills: <span id="drill_count">0</span>
+          <span class="drill">Cost: <span id="drill_cost">100</span>
+
+        </div>
+
+        <div id="mine_wrapper" class="building" onClick="buyMine()" align="center" title="Mines generate 80 pebbles per second.">
+
+          <div id="building_mine"><img src="img/mine.png" height="128"></div>
+          <span class="mine">Mines: <span id="mine_count">0</span>
+          <span class="mine">Cost: <span id="mine_cost">1100</span>
+
+        </div>
+
+        <div id="factory_wrapper" class="building rightmostpanel" onClick="buyFactory()" align="center" title="Factories generate 480 pebbles per second.">
+
+          <div id="building_factory"><img src="img/factory.png" height="128"></div>
+          <span class="factory">Factories: <span id="factory_count">0</span>
+          <span class="factory">Cost: <span id="factory_cost">12000</span>
+
+        </div>
+
+      </div>
+
+      <div id="wrapper_buildings2">
+
+        <div id="laserturret_wrapper" class="building" onClick="buyLaserturret()" align="center" title="Laser turrets generat 2600 pebbles per second.">
+
+          <div id="building_laserturret"><img src="img/laser-turret.png" height="128"></div>
+          <span class="laserturret">Laser turrets: <span id="laserturret_count">0</span>
+          <span class="factory">Cost: <span id="laserturret_cost">130000</span>
+
+        </div>
+
+        <div id="timemachine_wrapper" class="building" onClick="buyTimemachine()" align="center" title="Time machines generate 14000 pebbles per second.">
+
+          <div id="building_timemachine"><img src="img/time-machine.png" height="128"></div>
+          <span class="timemachine">Time machines: <span id="timemachine_count">0</span>
+          <span class="timemachine">Cost: <span id="timemachine_cost">1400000</span>
+
+        </div>
+
+        <div id="cloningfacility_wrapper" class="building" onClick="buyCloningfacility()" align="center" title="Cloning facilities generate 78000 pebbles per second.">
+
+          <div id="building_cloningfacility"><img src="img/cloning-facility.png" height="128"></div>
+          <span class="cloningfacility">Cloning facilities: <span id="cloningfacility_count">0</span>
+          <span class="cloningfacility">Cost: <span id="cloningfacility_cost">20000000</span>
+
+        </div>
+
+        <div id="dimensionalportal_wrapper" class="building rightmostpanel" onClick="buyDimensionalportal()" align="center" title="Dimensional portals generate 440000 pebbles per second.">
+
+          <div id="building_factory"><img src="img/dimensional-portal.png" height="128"></div>
+          <span class="dimensionalportal">Dimensional portals: <span id="dimensionalportal_count">0</span>
+          <span class="dimensionalportal">Cost: <span id="dimensionalportal_cost">330000000</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
