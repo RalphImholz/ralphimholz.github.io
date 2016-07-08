@@ -1,0 +1,51 @@
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2, h3, h4 {
+
+}
+
+p {
+
+}
+
+a {
+  color: #383847;
+}
+
+.item-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.item-subtitle {
+  font-size: 20px;
+}
+
+.item-meta {
+  color: #fff;
+  font-weight: bold;
+  font-style: italic;
+  text-align: right;
+  margin-bottom: 0;
+}
+
+.item-text {
+  color: #383847;
+}
+
+.item-lore {
+  color: white;
+  font-style: italic;
+  background-color: gray;
+  box-shadow: 18px 0px 0px 8px gray, -18px 0px 0px 8px gray;
+  border-radius: 4px;
+}
+
+.lastparagraph {
+  margin-bottom: 0;
+}

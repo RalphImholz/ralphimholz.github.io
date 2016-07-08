@@ -1,101 +1,156 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
 
-    <title>Pebbles</title>
-    <link rel="stylesheet" type="text/css" href="interface.css" />
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-    <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap-restyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro" rel="stylesheet">
 
   </head>
+
   <body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-dark bg-inverse" align="center">
+          <h1>All the items and things that be.</h1>
+        </nav>
+    </div>
 
-    <div id="wrapper">
+    <div class="row">
+      <div class="container">
+        <ul class="nav nav-pills" role="tablist">
+          <li class="nav-item"><a href="#home" class="nav-link active" data-toggle="tab" role="tab">Home</a></li>
+          <li class="nav-item"><a href="#dennis" class="nav-link" data-toggle="tab" role="tab">Dennis</a></li>
+          <li class="nav-item"><a href="#jonathan" class="nav-link" data-toggle="tab" role="tab">Jonathan</a></li>
+          <li class="nav-item"><a href="#vincent" class="nav-link" data-toggle="tab" role="tab">Vincent</a></li>
+        </ul>
+      </div>
+    </div>
 
-      <div id="wrapper_rock" onClick="rockClick(1)" align="center">
+    <div class="tab-content">
 
-        <div id="rock"><img src="img/stone-pile.png" height="256"></div>
-
-        <span id="pebbles">Pebbles: <span id="pebbles_count">0</span></span>
-        <span id="pebblespersecond">PPS: <span id="pps">0</span></span>
-
+      <div class="tab-pane active" id="home" role="tab">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="card-block">
+                  <div class="card-text">
+                    <p>Klik op 1 van de namen om naar de corresporende items te gaan.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3"></div>
+          </div>
+        </div>
       </div>
 
-      <div id="wrapper_buildings">
-
-        <div id="worker_wrapper" class="building" onClick="buyWorker()" align="center" title="Workers generate 1 pebble per second.">
-
-          <div id="building_worker"><img src="img/mining.png" height="128"></div>
-          <span class="worker">Workers: <span id="worker_count">0</span>
-          <span class="worker">Cost: <span id="worker_cost">15</span>
-
+      <div class="tab-pane" id="dennis" role="tab">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title item-title">Heironeous' Guitar Case</h3>
+                  <h4 class="item-title item-subtitle"></h4>
+                  <p class="item-meta">Wondrous Item, rare (requires attunement)</p>
+                </div>
+                <div class="card-block">
+                <div class="card-text">
+                    <p class="item-lore">Won in a duel between two fellow guitar players, one of which turned out to be Heironeous himself. It is engraved with a squiggly autograph.</p>
+                    <p class="item-text">Whenever you put a bow of any type in this case, the bow transforms into a guitar with the same effects.</p>
+                    <p class="item-text">The product of this case is considered a longbow. The damage is considered magical.</p>
+                    <p class="item-text lastparagraph">Bards can use these special longbows as a spellcasting focus as well.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title item-title">Leira's Pebbles</h3>
+                  <h4 class="item-title item-subtitle"></h4>
+                  <p class="item-meta">Wondrous Item, rare</p>
+                </div>
+                <div class="card-block">
+                <div class="card-text">
+                    <p class="item-lore">Small rocks from Leira's personal pond, imbued with all kinds of trickery and deceit.</p>
+                    <p class="item-text">This pouch contains 10 pebbles. When you throw a pebble on the ground, a small puff of smoke appears. Once per day, using a bonus action or reaction, you can throw a pebble at your own feet and teleport 15ft. to a location you can see. The remaining 9 pebbles you throw that day will only create the puff of smoke.</p>
+                    <p class="item-text lastparagraph">At midnight, the pouch refills itself back to full (10 pebbles).</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div id="drill_wrapper" class="building" onClick="buyDrill()" align="center" title="Drills generate 10 pebbles per second.">
-
-          <div id="building_drill"><img src="img/drill.png" height="128"></div>
-          <span class="drill">Drills: <span id="drill_count">0</span>
-          <span class="drill">Cost: <span id="drill_cost">100</span>
-
-        </div>
-
-        <div id="mine_wrapper" class="building" onClick="buyMine()" align="center" title="Mines generate 80 pebbles per second.">
-
-          <div id="building_mine"><img src="img/mine.png" height="128"></div>
-          <span class="mine">Mines: <span id="mine_count">0</span>
-          <span class="mine">Cost: <span id="mine_cost">1100</span>
-
-        </div>
-
-        <div id="factory_wrapper" class="building rightmostpanel" onClick="buyFactory()" align="center" title="Factories generate 480 pebbles per second.">
-
-          <div id="building_factory"><img src="img/factory.png" height="128"></div>
-          <span class="factory">Factories: <span id="factory_count">0</span>
-          <span class="factory">Cost: <span id="factory_cost">12000</span>
-
-        </div>
-
       </div>
 
-      <div id="wrapper_buildings2">
+      <div class="tab-pane" id="jonathan" role="tab">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title item-title">Uriel's Flight</h3>
+                  <h4 class="item-title item-subtitle"></h4>
+                  <p class="item-meta">Gemstone, very rare (requires attunement, celestial blood)</p>
+                </div>
+                <div class="card-block">
+                <div class="card-text">
+                    <p class="item-lore">Said to be refined from the moon and the purest of all light, this gemstone is blessed by the divine archangel Uriel himself. His power guides and protects those who share even the slightest of his divinity from the deepest and darkest plunges.</p>
+                    <p class="item-text">When the wearer of this ring is falling, spectral wings sprout from their back, allowing them to safely float down.</p>
+                    <p class="item-text lastparagraph">While floating, the wearer can move in any direction at will for a distance equal to the distance they are falling.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <div id="laserturret_wrapper" class="building" onClick="buyLaserturret()" align="center" title="Laser turrets generat 2600 pebbles per second.">
+      <div class="tab-pane" id="vincent" role="tab">
+        <div class="container">
+          <div class="row">
 
-          <div id="building_laserturret"><img src="img/laser-turret.png" height="128"></div>
-          <span class="laserturret">Laser turrets: <span id="laserturret_count">0</span>
-          <span class="factory">Cost: <span id="laserturret_cost">130000</span>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title item-title">The Sapphire Droplet</h3>
+                  <h4 class="item-title item-subtitle">Eldath's Tear</h4>
+                  <p class="item-meta">Amulet, very rare</p>
+                </div>
+                <div class="card-block">
+                <div class="card-text">
+                    <p class="item-lore">Said to be forged at the center of an infinite whirlpool in the middle of the Quana Sea by Eldath herself, this droplet-shaped sapphire holds great power, and great amounts of water.</p>
+                    <p class="item-text">When you cast a spell using this amulet as a focus, the amulet fuses with your hand and you enter a new, calm state: <b>Sapphire Peace</b>. In this state your body is able to channel large amounts of water, as well as being able to resist pain.</p>
+                    <p class="item-text">While in <b>Sapphire Peace</b>, you can bring forth large amounts of water, making it possible to cast all spells that use water to be cast freely. You also gain +1 AC.</p>
+                    <p class="item-text lastparagraph">You can exit <b>Sapphire Peace</b> whenever you want but when you do, you lose your AC bonus and take damage equal to your level times 2. You may roll a constitution save to halve this damage (DC of 12).</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
 
         </div>
-
-        <div id="timemachine_wrapper" class="building" onClick="buyTimemachine()" align="center" title="Time machines generate 14000 pebbles per second.">
-
-          <div id="building_timemachine"><img src="img/time-machine.png" height="128"></div>
-          <span class="timemachine">Time machines: <span id="timemachine_count">0</span>
-          <span class="timemachine">Cost: <span id="timemachine_cost">1400000</span>
-
-        </div>
-
-        <div id="cloningfacility_wrapper" class="building" onClick="buyCloningfacility()" align="center" title="Cloning facilities generate 78000 pebbles per second.">
-
-          <div id="building_cloningfacility"><img src="img/cloning-facility.png" height="128"></div>
-          <span class="cloningfacility">Cloning facilities: <span id="cloningfacility_count">0</span>
-          <span class="cloningfacility">Cost: <span id="cloningfacility_cost">20000000</span>
-
-        </div>
-
-        <div id="dimensionalportal_wrapper" class="building rightmostpanel" onClick="buyDimensionalportal()" align="center" title="Dimensional portals generate 440000 pebbles per second.">
-
-          <div id="building_factory"><img src="img/dimensional-portal.png" height="128"></div>
-          <span class="dimensionalportal">Dimensional portals: <span id="dimensionalportal_count">0</span>
-          <span class="dimensionalportal">Cost: <span id="dimensionalportal_cost">330000000</span>
-
-        </div>
-
       </div>
 
     </div>
 
-    <script type="text/javascript" src="main.js"></script>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
   </body>
+
 </html>
